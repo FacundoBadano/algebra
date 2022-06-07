@@ -23,7 +23,7 @@ for e in range(etapa):
 
 # Se procede a graficar el triangulo
 fig1 = plt.figure(facecolor='white')
-ax1 = fig1.add_subplot(111, aspect='equal', facecolor='red')
+ax1 = fig1.add_subplot(111, aspect='equal')
 
 for t in triangle.reshape(3**etapa,3,2):
     ax1.add_patch(mpatches.Polygon(t, fc="y"))
