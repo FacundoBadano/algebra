@@ -1,5 +1,13 @@
 # algebra
-Algebra - Antena fractal
+## Algebra - Antena fractal
+
+* Requisitos:
+- Python 3.+
+- Pip 3.+
+- graphics.py (pip3 install graphics.py)
+
+
+
 
 Necesario instalar pip
  #Windows
