@@ -1,7 +1,7 @@
 # algebra
 ## Algebra - Antena fractal
 
-** Requisitos: **
+__Requisitos:__
 - Python 3.+
 - Pip 3.+
 - graphics.py (pip3 install graphics.py)
