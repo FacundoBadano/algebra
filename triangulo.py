@@ -3,7 +3,6 @@ import math
 
 def main():
     win = GraphWin("Antena Fractal", 700, 900)
-
     dif = 66.9872981077807
 
     antena_1 = Rectangle(Point(100,100 + dif), Point(350,350 + dif))
