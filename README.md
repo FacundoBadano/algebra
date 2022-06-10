@@ -15,5 +15,3 @@ Necesario instalar pip
  python get-pip.py
  pip -V   #Check version
 
-Necesario instalar matplotlib
- pip install matplotlib
