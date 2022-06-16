@@ -5,9 +5,9 @@ def main():
     win = GraphWin("Antena Fractal", 700, 900)
     dif = 71.9872981077807
 
-    antena_1 = Rectangle(Point(100,100 + dif), Point(350,350 + dif))
-    antena_2 = Rectangle(Point(355,100 + dif), Point(605,350 + dif))
-    palito = Rectangle(Point(351.5,100 + dif), Point(351.5,352 + dif))
+    antena_1 = Rectangle(Point(80,100 + dif), Point(330,350 + dif))
+    antena_2 = Rectangle(Point(370,100 + dif), Point(620,350 + dif))
+    palito = Rectangle(Point(339.5,100 + dif), Point(360,372 + dif))
     
     antena_1.setFill("black")
     antena_2.setFill("black")
@@ -23,7 +23,7 @@ def main():
 
     A = Point(100,800)
     B = Point(600,800)
-    C = Point(353, altura)
+    C = Point(350, altura)
 
     def getCoordenadaCorte(pointA, pointB, pointC):
         print("Coordenadas X:", pointA.getX(), pointB.getX(), pointC.getX())
@@ -42,6 +42,8 @@ def main():
     def operacionCoord(point1, point2):
         x = (point1.getX() / 2 + point2.getX() / 2)
         y = (point1.getY() / 2 + point2.getY() / 2)
+
+        print("x: {}, y: {}".format(x,y))
         
         return Point(x,y)
 
