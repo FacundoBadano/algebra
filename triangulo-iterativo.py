@@ -50,9 +50,21 @@ def main():
         for triangle in a_procesar:
             triangle.setFill("black")
             triangle.draw(win)
-        
-    def esfuerzo():
+    
+    # Se chequea que el input sea numero positivo
+    def check():
         resp = input("Iteracion Triangulo Sierpinski: ")
+        if (resp.isnumeric() == False):
+            print("Error. No se recibio numero. Intente nuevamente")
+            check()
+        else:
+            if(int(resp)<1):
+                print("Error. No se recibio numero positivo. Intente nuevamente")
+                check()
+            else:
+                sierpinski(esfuerzo(resp))    
+
+    def esfuerzo(resp):
         suma = 0
         for n in range(int(resp)):
             suma += (3 ** n)
@@ -60,10 +72,10 @@ def main():
         print("Esfuerzo:", suma)
         return suma
 
-    def sierpinski():
+    def sierpinski(obj):
         triangulo_mayor = Polygon(A,B,C)
         aux_triangulos = [triangulo_mayor]
-        objetivo = esfuerzo()
+        objetivo = obj
 
         for x in range (objetivo):
             vert_data = aux_triangulos.pop(0).getPoints()
@@ -72,7 +84,11 @@ def main():
                 aux_triangulos.append(triangulo)
         procesar_triangulos(aux_triangulos)
 
-    sierpinski()
+        print("Antena representada correctamente!")
+        input("Presiona cualquier tecla para salir.")
+        quit()
+
+    check()
     win.setBackground("white")
 
     while True:
