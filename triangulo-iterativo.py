@@ -3,6 +3,7 @@ import math
 
 def main():
     win = GraphWin("Antena Fractal", 700, 900)
+    win.setBackground("white")
     dif = 71.9872981077807
 
     antena_1 = Rectangle(Point(80,100 + dif), Point(330,350 + dif))
@@ -89,7 +90,7 @@ def main():
         quit()
 
     check()
-    win.setBackground("white")
+    
 
     while True:
         print(win.getMouse())
