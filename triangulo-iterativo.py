@@ -85,7 +85,7 @@ def main():
         procesar_triangulos(aux_triangulos)
 
         print("Antena representada correctamente!")
-        input("Presiona cualquier tecla para salir.")
+        input("Presiona la tecla enter para salir.")
         quit()
 
     check()
