@@ -4,7 +4,10 @@ import math
 def main():
     win = GraphWin("Antena Fractal", 700, 900)
     win.setBackground("white")
-    dif = 71.9872981077807 # Diferencia en coordenadas Y para obtener triangulo conextado a palito
+    dif = 71.9872981077807 
+    # Diferencia en coordenadas para obtener una buena representación de la antena fractal
+    # Ya que el esquema brindado por la letra, contenía pequeños errores de medidas
+    # Sucede lo mismo con altura (489)
 
     # Figuras estáticas
     antena_1 = Rectangle(Point(80,100 + dif), Point(330,350 + dif))
@@ -62,20 +65,21 @@ def main():
         if (resp.isnumeric() == False):
             print("Error. No se recibio numero. Intente nuevamente")
             check()
+        elif(int(resp)<1):
+            print("Error. No se recibio numero positivo. Intente nuevamente")
+            check()
         else:
-            if(int(resp)<1):
-                print("Error. No se recibio numero positivo. Intente nuevamente")
-                check()
-            else:
-                sierpinski(esfuerzo(resp))    
+            sierpinski(esfuerzo(resp))    
 
     # Cantidad de triangulos a procesar
     def esfuerzo(resp):
         suma = 0
+        
         for n in range(int(resp)):
             suma += (3 ** n)
 
         print("Esfuerzo:", suma)
+        print("Su antena contiene {} triangulos.".format(3 ** int(resp)))
         return suma
 
     # Armado del triangulo a partir de esfuerzo indicado
