@@ -95,10 +95,5 @@ def main():
         quit()
 
     check()
-    
-
-    while True:
-        print(win.getMouse())
-
 main()
 
